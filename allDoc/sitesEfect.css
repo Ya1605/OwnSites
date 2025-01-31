@@ -1,5 +1,39 @@
+body{
+    mar
+}
+
 .secOne{
     height: 100vh;
-    width: 100vh;
-    background: ;
+    width: 100vw;
+    background: linear-gradient(270deg, #1C1D20 30%, #9F3626 60%, #E6533C 100%);
+
+
+
+
+}
+
+.divFirst{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: flex-start;
+    gap: -5px;
+    flex-shrink: 0;
+    backdrop-filter: blur(3px);
+
+
+}
+
+.divFirst>aside{
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(59, 59, 59, 0.20) 16.67%, rgba(255, 255, 255, 0.00) 100%);
+    background-blend-mode: overlay;
+    backdrop-filter: blur(50px);
 }
