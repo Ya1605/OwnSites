@@ -5,12 +5,14 @@ body{
 .secOne{
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(270deg, #1C1D20 30%, #9F3626 60%, #E6533C 100%);
+    background: linear-gradient(270deg, #1C1D20 40%, #69292D 55%, #ED3B44 100%);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    font-size: xxx-large;
 
 
-
-
-}
 
 .divFirst{
     height: 100vh;
@@ -24,9 +26,9 @@ body{
 
 }
 
-.divFirst>aside{
+.divFirst aside{
     height: 100vh;
-    width: 40vw;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,4 +38,10 @@ body{
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(59, 59, 59, 0.20) 16.67%, rgba(255, 255, 255, 0.00) 100%);
     background-blend-mode: overlay;
     backdrop-filter: blur(50px);
+}
+
+.headOne{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
 }
