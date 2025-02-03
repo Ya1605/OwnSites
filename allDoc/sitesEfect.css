@@ -7,10 +7,12 @@ body{
     width: 100vw;
     background: linear-gradient(270deg, #1C1D20 40%, #69292D 55%, #ED3B44 100%);
     display: flex;
-    justify-content: left;
+    justify-content:center;
     align-items: center;
     color: white;
-    font-size: xxx-large;}
+    font-size: xxx-large;
+    position: relative;
+}
 
 
 
@@ -22,6 +24,8 @@ body{
     gap: -5px;
     flex-shrink: 0;
     backdrop-filter: blur(3px);
+    position: absolute;
+    left: 0;
 
 
 }
@@ -48,15 +52,16 @@ body{
 .container{
     margin-bottom:-430px;  /* відступ убирала щоб стало все знизу   */
     display: flex;
-   justify-content: flex-end;
+   justify-content: space-evenly;
     align-items: flex-end;
     gap: 8px;
-
+    position: absolute;
+    right: 0;
 }
 
 nav{
     display: flex;
-    padding: 18px 24px;
+    padding: 16px 24px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -68,7 +73,7 @@ nav{
 
     justify-content: center;
      display: flex;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: initial;
     color: #FAFAFA;
     /* Desktop_tablet/H1 */
@@ -78,5 +83,40 @@ nav{
     font-weight: 500;
     line-height: 50px; /* 100% */
     letter-spacing: -0.7px;
+    position: absolute;
 
 }
+
+header{
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+
+}
+
+.hedBut{
+    height: 20px;
+    width: 100px;
+    padding: 15px 15px;
+    justify-content: center;
+    align-items: center;
+     background: #ED3B44;
+    border-radius: 60px;
+    border: 1px solid rgba(225, 10, 10, 0.2);
+    display: flex;
+}
+                         /* black first button*/
+header .hedBut:nth-child(1){
+   background: #1C1D20;
+    color: white;
+}
+
+/*---------------------------------------second page--------------------------------*/
+
+
+
