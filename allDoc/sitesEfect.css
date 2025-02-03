@@ -56,7 +56,8 @@ body{
     align-items: flex-end;
     gap: 8px;
     position: absolute;
-    right: 0;
+    right: 10px;
+
 }
 
 nav{
@@ -110,6 +111,8 @@ header{
     border-radius: 60px;
     border: 1px solid rgba(225, 10, 10, 0.2);
     display: flex;
+    margin: 20px;
+
 }
                          /* black first button*/
 header .hedBut:nth-child(1){
@@ -119,5 +122,9 @@ header .hedBut:nth-child(1){
 
 /*---------------------------------------second page--------------------------------*/
 
-
+.secSecond{
+    height: 100vh;
+    width: 100vw;
+    background: #1C1D20;
+}
 
