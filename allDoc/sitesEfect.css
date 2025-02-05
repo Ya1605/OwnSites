@@ -129,18 +129,93 @@ header .hedBut:nth-child(1){
     height: 100vh;
     width: 100vw;
     background: #1C1D20;
+    display: flex;
+
 
 }
 
 .secSecDiv{
     display: flex;
-    width: 50vw;
-    height: 100vh;
-
-    flex-direction: column;
+    width: 40vw;
+    height: 90vh;
+   margin-left: 30px;
+    margin-top: 35px;
     align-items: center;
     border-radius: 24px;
     background: #242527;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    font-family: "Inter Tight";
+    font-size: 20px;
+    font-style: normal;
+    text-shadow: 10px 10px 10px hsl(white);
+
+
+}
+.secSecDiv p{
+    margin: 0;
 
 }
 
+.secThirdDiv{
+    width: 45vw;
+    height: 90vh;
+    background: #242527;
+    display: flex;
+    border-radius: 24px;
+    margin-top: 35px;
+    margin-left: 80px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+.scene {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.disc {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgb(225, 15, 15);
+    border-radius: 50%;
+    transform-origin: center;
+    animation: fall 5s infinite ease-in-out;
+}
+
+.disc:nth-child(1)  { top: -150px; animation-delay: 0s; }
+.disc:nth-child(2)  { top: -100px; animation-delay: 0.2s; }
+.disc:nth-child(3)  { top: -50px;  animation-delay: 0.4s; }
+.disc:nth-child(4)  { top: 40px;    animation-delay: 0.6s; }
+.disc:nth-child(5)  { top: 20px;   animation-delay: 0.8s; }
+.disc:nth-child(6)  { top: 100px;  animation-delay: 1s; }
+.disc:nth-child(7)  { top: 150px;  animation-delay: 1.2s; }
+.disc:nth-child(8)  { top: 200px;  animation-delay: 1.4s; }
+.disc:nth-child(9)  { top: 250px;  animation-delay: 1.6s; }
+.disc:nth-child(10) { top: 300px;  animation-delay: 1.8s; }
+.disc:nth-child(11) { top: 350px;  animation-delay: 2s; }
+.disc:nth-child(12) { top: 400px;  animation-delay: 2.2s; }
+.disc:nth-child(13) { top: 450px;  animation-delay: 2.4s; }
+
+@keyframes fall {
+    0% {
+        transform: translateY(0px) scale(1) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(300px) scale(1.5) rotateX(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(600px) scale(2) rotateX(360deg);
+        opacity: 0;
+    }
+}
