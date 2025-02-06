@@ -21,7 +21,7 @@ body{
     width: 50vw;
     display: flex;
     align-items: flex-start;
-    gap: -5px;
+    /*gap: -5px;*/
     flex-shrink: 0;
     backdrop-filter: blur(3px);
     position: absolute;
@@ -40,8 +40,8 @@ body{
     flex: 1 0 0;
     align-self: stretch;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(59, 59, 59, 0.20) 16.67%, rgb(255, 255, 255, 0.00) 100%);
-    background-blend-mode: overlay;
-    backdrop-filter: blur(50px);
+    /*background-blend-mode: overlay;
+    /*backdrop-filter: blur(50px);*/
 }
 
 .headOne{
@@ -88,6 +88,7 @@ nav{
     line-height: 50px; /* 100% */
     letter-spacing: -0.7px;
     position: absolute;
+
 
 }
 
@@ -144,24 +145,53 @@ header .hedBut:nth-child(1){
     border-radius: 24px;
     background: #242527;
     text-align: center;
-    color: white;
+    /*color: white;*/
     padding: 0 20px;
     font-family: "Inter Tight";
     font-size: 20px;
     font-style: normal;
     text-shadow: 10px 10px 10px hsl(white);
+    position: relative;
+    overflow: hidden;
+
 
 
 }
 .secSecDiv p{
     margin: 0;
+    font-size: 2rem; /* Розмір тексту */
+    font-weight: bold; /* Товстий шрифт */
+    color: #e82332; /* Колір тексту */
+    position: absolute; /* Абсолютне позиціонування для руху */
+    top: -100px; /* Початкова позиція тексту (поза екраном) */
+    left: 50%; /* Вирівнюємо текст по центру */
+    transform: translateX(-50%); /* Центруємо текст по горизонталі */
+    opacity: 0; /* Початково текст невидимий */
+    animation: fall 15s ease-in-out 3s infinite; /* Анімація падіння */
+
+
+
 
 }
+@keyframes fall {
+    0% {
+        transform: translateX(-100%) translateY(-50%);
+        opacity: 0.3;/* Початкове непрозоре становище */
+    }
 
+    50% {
+        transform: translateX(-50%) translateY(90%);
+        opacity: 1;
+    }
+
+100% {
+    transform: translateX(-50%) translateY(60%);/*можна змінити щоб пропадав у праву сторону*/
+    opacity: 0;/*коли закінчує анімацію то стає невидимим*/
+}}
 .secThirdDiv{
     width: 45vw;
     height: 90vh;
-    background: #242527;
+    background: #69292d;
     display: flex;
     border-radius: 24px;
     margin-top: 35px;
@@ -169,53 +199,73 @@ header .hedBut:nth-child(1){
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-
-
-.scene {
     position: relative;
-    width: 300px;
-    height: 600px;
     perspective: 1000px;
 }
 
-.disc {
+
+
+.cube {
+    width: 300px;
+    height: 300px;
     position: absolute;
-    width: 120px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgb(225, 15, 15);
-    border-radius: 50%;
     transform-origin: center;
-    animation: fall 5s infinite ease-in-out;
+    transform-style: preserve-3d;
+    animation: rotate 6s linear infinite; /* Анімація для обертання */
+
 }
 
-.disc:nth-child(1)  { top: -150px; animation-delay: 0s; }
-.disc:nth-child(2)  { top: -100px; animation-delay: 0.2s; }
-.disc:nth-child(3)  { top: -50px;  animation-delay: 0.4s; }
-.disc:nth-child(4)  { top: 40px;    animation-delay: 0.6s; }
-.disc:nth-child(5)  { top: 20px;   animation-delay: 0.8s; }
-.disc:nth-child(6)  { top: 100px;  animation-delay: 1s; }
-.disc:nth-child(7)  { top: 150px;  animation-delay: 1.2s; }
-.disc:nth-child(8)  { top: 200px;  animation-delay: 1.4s; }
-.disc:nth-child(9)  { top: 250px;  animation-delay: 1.6s; }
-.disc:nth-child(10) { top: 300px;  animation-delay: 1.8s; }
-.disc:nth-child(11) { top: 350px;  animation-delay: 2s; }
-.disc:nth-child(12) { top: 400px;  animation-delay: 2.2s; }
-.disc:nth-child(13) { top: 450px;  animation-delay: 2.4s; }
+.cube div {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border: 2px solid rgb(213, 23, 23);
 
-@keyframes fall {
+}
+
+/* Стилі для кожної грані куба */
+.left {
+    transform: rotateY(90deg) translateZ(150px);
+    background-color: #242527;
+}
+
+.right {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: #242527;
+}
+
+.front {
+    transform: translateZ(150px);
+    background-color: #242527;
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(150px);
+    background-color: #242527;
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: #242527;
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+    background-color: #242527;
+}
+
+/* Анімація для обертання куба */
+@keyframes rotate {
     0% {
-        transform: translateY(0px) scale(1) rotateX(0deg);
-        opacity: 1;
+        transform: rotateX(0deg) rotateY(0deg) scale(0.5); /* Початковий розмір куба */
     }
     50% {
-        transform: translateY(300px) scale(1.5) rotateX(180deg);
-        opacity: 0.7;
+        transform: rotateX(180deg) rotateY(180deg) scale(1); /* Середина анімації (крок масштабування) */
     }
     100% {
-        transform: translateY(600px) scale(2) rotateX(360deg);
-        opacity: 0;
+        transform: rotateX(360deg) rotateY(360deg) scale(0.5); /* Кінцевий розмір куба */
     }
 }
+
+
+
