@@ -61,7 +61,7 @@ body{
 
 }
 
-nav{
+.languageNav{
     display: flex;
     padding: 16px 24px;
     justify-content: center;
@@ -266,6 +266,15 @@ header .hedBut:nth-child(1){
         transform: rotateX(360deg) rotateY(360deg) scale(0.5); /* Кінцевий розмір куба */
     }
 }
+/*---------------------------------------third page--------------------------------*/
 
+.secThird{
+    height: 100vh;
+    width: 100vw;
+    background: #1C1D20;
+}
 
+.firstArticle{
+    color: white;
+}
 
