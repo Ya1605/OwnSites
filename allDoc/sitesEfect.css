@@ -273,8 +273,8 @@ header .hedBut:nth-child(1){
     height: 100vh;
     width: 100vw;
     background: #1C1D20;
-
     overflow: hidden;
+
 
 
 }
@@ -327,57 +327,82 @@ header .hedBut:nth-child(1){
  }*/
 
 
+.formTextDiv{
+
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
 .form-container {
-    background: rgba(36, 37, 39, 0.9);
-    padding: 20px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 400px;
+    margin-top: 25px;
+    height: 350px;
+    width: 300px;
+    background: rgba(174, 39, 39, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
-.form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+
+form{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
+
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 8px;
     outline: none;
-    font-size: 16px;
+    font-size: 12px;
     resize: none;
+
 }
-.form-group textarea {
-    height: 100px;
-}
+
 .form-group input[type="submit"] {
-    background: #ED3B44;
+    background: #0e0909;
     color: white;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.1s ease;
+    margin-top: 25px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+
 }
 .form-group input[type="submit"]:hover {
-    background: #a8282f;
+    background: #df8585;
+
 }
 
 
 .secThirdSecDiv{
-    height: 60vh;
-    width: 40vw;
+    height: 300px;
+    width: 500px;
     color: #FAFAFA;
     display: flex;
-    justify-content: end;
-    align-items:end;
     flex-direction: column;
-    padding-left: 700px;
+    /*padding-left: 700px;*/
 
 
 }

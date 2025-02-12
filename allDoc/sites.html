@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
 <link rel="stylesheet" href="sitesEfect.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            emailjs.init("z3_NU-a4Cro6A-hH0"); // Встав свій Public Key
+            console.log('EmailJS ініціалізовано');
+        });
 
+    </script>
 </head>
 <body>
 
@@ -67,7 +74,7 @@
 
 
 <section class="secThird">
-    <div class="formAndText">
+     <div class="formTextDiv">
     <div class="secThirdSecDiv">
 
         <p>I am Yuliia, a talented programmer with extensive expertise
@@ -85,22 +92,21 @@
             allow me to create efficient and scalable software.</p>
         </div>
          <div>
-        <p> Let's work together</p>
 
     <div class="form-container">
-        <h2>Feedback Form</h2>
-        <form action="#" method="POST">
+        <h3>Feedback Form</h3>
+        <form id="contact-form">
             <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Введіть і'мя" required>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Введіть email" required>
             </div>
             <div class="form-group">
-                <label for="comment">Comment</label>
-                <textarea id="comment" name="comment" placeholder="Write your comment here..." required></textarea>
+                <label for="comment"></label>
+                <textarea id="comment" name="comment" placeholder="Вкажіть номер телефону чи комент" required></textarea>
             </div>
             <div class="form-group">
                 <input type="submit" value="Submit Feedback">
@@ -108,7 +114,7 @@
         </form>
     </div>
     </div>
-    </div>
+     </div>
 
     <div class="greyStr">
     <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 1376 2" fill="none">
@@ -131,6 +137,6 @@
 
 
 
-
+<script src="sendForm.js"></script>
 </body>
 </html>
