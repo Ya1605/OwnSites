@@ -24,7 +24,7 @@ body{
     align-items: flex-start;
     /*gap: -5px;*/
     flex-shrink: 0;
-    backdrop-filter: blur(3px);
+    /*backdrop-filter: blur(3px);*/
     position: absolute;
     left: 0;
 
