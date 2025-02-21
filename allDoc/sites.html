@@ -7,7 +7,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            emailjs.init("z3_NU-a4Cro6A-hH0"); // Встав свій Public Key
+            emailjs.init("z3_NU-a4Cro6A-hH0");
             console.log('EmailJS ініціалізовано');
         });
 
@@ -17,9 +17,12 @@
 
 <section class="secOne">
     <header>
-        <button class="hedBut">Order the progekt</button>
+
+        <a href="#contact-form" class="hedBut">Order the project</a>
+
         <a>Menu</a>
-        <button class="hedBut">Sing in</button>
+
+        <a href="#contact-form" class="hedBut">Recall me</a>
     </header>
 
     <div id="divFirst">
@@ -42,9 +45,8 @@
     <div class="text">Hello,<br>my name is Yuliia - i'm front-end developer</div>
 
     <div class="secDiv">
-        <nav class="languageNav">EN</nav>
-        <nav class="languageNav">UK</nav>
-        <nav class="languageNav">yuliiadev@ukr.net</nav>
+
+        <a  href="mailto:yuliiadev@ukr.net" class="languageNav">yuliiadev@ukr.net</a>
     </div>
 
 
@@ -91,8 +93,9 @@
             I have a strong understanding of various programming languages, frameworks and architectural concepts that
             allow me to create efficient and scalable software.</p>
         </div>
-         <div>
 
+
+         <div>
     <div class="form-container">
         <h3>Feedback Form</h3>
         <form id="contact-form">
