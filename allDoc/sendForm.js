@@ -45,3 +45,40 @@ document.getElementById("contact-form").addEventListener("submit",
             submitBtn.style.backgroundColor = ""; // Повертає початковий колір кнопки
         }
     });
+
+const staticText = "Hello,my name is Yuliia -"
+const words = ["i'm front-end developer", " i'm HTML developer", "i'm markup developer"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingSpeed = 150;
+const deletingSpeed = 100;
+const pauseTime = 1000;
+
+function typeEffect() {
+    const typingElement = document.querySelector(".text");
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting){
+         charIndex++;
+    }else {
+        charIndex--;
+    }
+
+    typingElement.textContent = staticText + currentWord.slice(0, charIndex);
+    let nextSpeed = isDeleting ? deletingSpeed : typingSpeed;
+
+    if(charIndex === currentWord.length +1){
+        isDeleting= true;
+        nextSpeed = pauseTime;
+
+    }
+    else if (charIndex === 0 && isDeleting){
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+    }
+
+    setTimeout(typeEffect,nextSpeed );
+}
+
+typeEffect();

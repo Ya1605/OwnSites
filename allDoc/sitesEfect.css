@@ -95,6 +95,9 @@ body{
     line-height: 50px; /* 100% */
     letter-spacing: -0.7px;
     position: absolute;
+    border-right: 3px solid white;
+    padding-right: 5px;
+    white-space: nowrap;
 
 
 }
@@ -377,7 +380,7 @@ form{
 
 }
 
-.form-group input, .form-group textarea {
+.form-group input {
     width: 100%;
     padding: 10px;
     border: none;
