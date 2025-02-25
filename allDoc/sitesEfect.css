@@ -140,6 +140,62 @@ header .hedBut:nth-child(1){
 .hedBut:hover{
     transform: scale(1.1);
 }
+
+/*--------------*/
+
+#menu{
+    z-index: 10;
+
+}
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    border-radius: 10px ;
+
+}
+
+#menu > ul > li {
+    position: relative;
+    display: inline-block;
+}
+
+#menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+#menu a:hover {
+    background: #bf1111;
+}
+
+/* Стилі для випадаючого меню */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 40px;
+
+    min-width: 150px;
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu a {
+    padding: 10px;
+    display: block;
+}
+
+/* Показуємо випадаюче меню при наведенні */
+#menu li:hover .submenu {
+    display: block;
+}
 /*---------------------------------------second page--------------------------------*/
 
 .secSecond{

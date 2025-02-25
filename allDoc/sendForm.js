@@ -82,3 +82,9 @@ function typeEffect() {
 }
 
 typeEffect();
+
+
+
+
+
+
