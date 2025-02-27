@@ -1,5 +1,5 @@
 
-
+//--------------------------FORMS send massage (emailJS)----------------------//
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Зупиняє стандартну поведінку форми
 
@@ -46,6 +46,7 @@ document.getElementById("contact-form").addEventListener("submit",
         }
     });
 
+//-----------------------ANIMATION 1 Page--------------------//
 const staticText = "Hello,my name is Yuliia -"
 const words = ["i'm front-end developer", " i'm HTML developer", "i'm markup developer"];
 let wordIndex = 0;
@@ -82,6 +83,29 @@ function typeEffect() {
 }
 
 typeEffect();
+
+//------------------------
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        } else {
+            // Забираємо клас із затримкою, щоб уникнути "миготіння"
+            setTimeout(() => {
+                entry.target.classList.remove("visible");
+            }, 300);
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll(".box").forEach(box => {
+    observer.observe(box);
+});
+
+
+
+
 
 
 

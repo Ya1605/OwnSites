@@ -1,6 +1,8 @@
 body{
     margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 .secOne{
@@ -141,61 +143,7 @@ header .hedBut:nth-child(1){
     transform: scale(1.1);
 }
 
-/*--------------*/
 
-#menu{
-    z-index: 10;
-
-}
-#menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    border-radius: 10px ;
-
-}
-
-#menu > ul > li {
-    position: relative;
-    display: inline-block;
-}
-
-#menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-
-#menu a:hover {
-    background: #bf1111;
-}
-
-/* Стилі для випадаючого меню */
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 40px;
-
-    min-width: 150px;
-}
-
-.submenu li {
-    display: block;
-}
-
-.submenu a {
-    padding: 10px;
-    display: block;
-}
-
-/* Показуємо випадаюче меню при наведенні */
-#menu li:hover .submenu {
-    display: block;
-}
 /*---------------------------------------second page--------------------------------*/
 
 .secSecond{
@@ -203,141 +151,59 @@ header .hedBut:nth-child(1){
     width: 100vw;
     background: #1C1D20;
     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    white-space: nowrap;
+    flex-direction: row;
+    padding-top: 30px;
+
+
 
 
 }
-
-.secSecDiv{
+.box {
     display: flex;
-    width: 40vw;
-    height: 90vh;
-   margin-left: 30px;
-    margin-top: 35px;
     align-items: center;
-    border-radius: 24px;
-    background: #242527;
-    text-align: center;
-    /*color: white;*/
-    padding: 0 20px;
-    font-family: "Inter Tight";
-    font-size: 20px;
-    font-style: normal;
-    text-shadow: 10px 10px 10px hsl(white);
-    position: relative;
-    overflow: hidden;
-
-
-
-}
-.secSecDiv p{
-    margin: 0;
-    font-size: 2rem; /* Розмір тексту */
-    font-weight: bold; /* Товстий шрифт */
-    color: #e82332; /* Колір тексту */
-    position: absolute; /* Абсолютне позиціонування для руху */
-    top: -100px; /* Початкова позиція тексту (поза екраном) */
-    left: 50%; /* Вирівнюємо текст по центру */
-    transform: translateX(-50%); /* Центруємо текст по горизонталі */
-    opacity: 0; /* Початково текст невидимий */
-    animation: fall 15s ease-in-out 3s infinite; /* Анімація падіння */
-
-
-
-
-}
-@keyframes fall {
-    0% {
-        transform: translateX(-100%) translateY(-50%);
-        opacity: 0.3;/* Початкове непрозоре становище */
-    }
-
-    50% {
-        transform: translateX(-50%) translateY(90%);
-        opacity: 1;
-    }
-
-100% {
-    transform: translateX(-50%) translateY(60%);/*можна змінити щоб пропадав у праву сторону*/
-    opacity: 0;/*коли закінчує анімацію то стає невидимим*/
-}}
-.secThirdDiv{
-    width: 45vw;
-    height: 90vh;
-    background: #69292d;
-    display: flex;
-    border-radius: 24px;
-    margin-top: 35px;
-    margin-left: 80px;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    perspective: 1000px;
+    flex-direction: column;
+   width: 250px;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-
-
-.cube {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    animation: rotate 6s linear infinite; /* Анімація для обертання */
-
+.box p{
+    font-size: 16px;
+}
+.box img {
+    max-height: 190vh;
+    width: 40vw;
+    border-radius: 15px;
 }
 
-.cube div {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    border: 2px solid rgb(213, 23, 23);
-
-}
-
-/* Стилі для кожної грані куба */
 .left {
-    transform: rotateY(90deg) translateZ(150px);
-    background-color: #242527;
+    transform: translateX(-100%);
 }
 
 .right {
-    transform: rotateX(90deg) translateZ(150px);
-    background-color: #242527;
+    transform: translateX(100%);
 }
 
-.front {
-    transform: translateZ(150px);
-    background-color: #242527;
+.box.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Стиль для тексту при наведенні */
+.hover-text {
+    margin-top: 30px;
+    color: #fff;
+
+
 }
 
-.back {
-    transform: rotateY(180deg) translateZ(150px);
-    background-color: #242527;
-}
 
-.top {
-    transform: rotateX(90deg) translateZ(150px);
-    background-color: #242527;
-}
 
-.bottom {
-    transform: rotateX(-90deg) translateZ(150px);
-    background-color: #242527;
-}
 
-/* Анімація для обертання куба */
-@keyframes rotate {
-    0% {
-        transform: rotateX(0deg) rotateY(0deg) scale(0.5); /* Початковий розмір куба */
-    }
-    50% {
-        transform: rotateX(180deg) rotateY(180deg) scale(1); /* Середина анімації (крок масштабування) */
-    }
-    100% {
-        transform: rotateX(360deg) rotateY(360deg) scale(0.5); /* Кінцевий розмір куба */
-    }
-}
+
+
 /*---------------------------------------third page--------------------------------*/
 
 .secThird{
@@ -349,53 +215,8 @@ header .hedBut:nth-child(1){
 
 
 }
-/*.secThirdSecDiv{
-    width: 400px;
-    font-size: 12px;
-    position: absolute;
-    color: white;
-    left: 800px;
-    top: 20px;
-    flex-direction: column;
-}
-
-.SecDivThirdSec{
-
-    color: #FAFAFA;
-
-}
-.greyStr{
-    display: flex;
-    position: absolute;
-    margin-top: 450px;
- }
-
- .SkillDiv{
-
-     height: 40px;
-     width: 40px;
-     display: flex;
-     justify-content: flex-end;
-     align-items: flex-end;
-     gap: 8px;
-     position: absolute;
-     right: 10px;
 
 
-
- }
-
- .navSkill{
-     display: flex;
-     padding: 16px 24px;
-     justify-content: center;
-     align-items: center;
-     gap: 10px;
-     border-radius: 20px;
-     border: 1px solid rgba(250, 250, 250, 0.20);
-     margin-bottom: 25px;
-     color: #FAFAFA;
- }*/
 
 
 .formTextDiv{
