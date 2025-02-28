@@ -1,8 +1,19 @@
+
+html{
+
+    overflow-x: hidden; /* Заборона горизонтального скролу */
+    overflow-y: auto;
+
+}
+
 body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    overflow-x: hidden; /* Заборона горизонтального скролу */
+    overflow-y: auto;
+    font-family: "Inter Tight", sans-serif;
 }
 
 .secOne{
@@ -13,7 +24,7 @@ body{
     justify-content:center;
     align-items: center;
     color: white;
-    font-size: xxx-large;
+    font-size: 26px;
     position: relative;
 }
 
@@ -67,15 +78,16 @@ body{
 .languageNav{
     all: unset;
     display: flex;
-    padding: 16px 24px;
+    padding: 26px 44px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     border-radius: 60px;
     border: 1px solid rgba(250, 250, 250, 0.20);
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     cursor: pointer;
     transition: transform 0.7s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-right: 30px;
 }
   .languageNav:hover{
 
@@ -118,12 +130,14 @@ header{
 
 .hedBut{
     all: unset;
-    width: 100px;
+    width: 130px;
+    height:30px;
+
     padding: 15px 15px;
     justify-content: center;
     align-items: center;
      background-color:  #ED3B44;
-    font-size: small;
+    font-size: 16px;
     border-radius: 60px;
     border: 1px solid rgba(225, 10, 10, 0.2);
     display: flex;
@@ -149,13 +163,13 @@ header .hedBut:nth-child(1){
 .secSecond{
     height: 100vh;
     width: 100vw;
-    background: #1C1D20;
+    background: linear-gradient(190deg, #1a1a1c 40%, #69292D 65%, #7c1c20 100%);
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     white-space: nowrap;
     flex-direction: row;
-    padding-top: 30px;
+    padding-top: 100px;
 
 
 
@@ -168,10 +182,13 @@ header .hedBut:nth-child(1){
     flex-direction: column;
    width: 250px;
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+
 }
 
 .box p{
-    font-size: 16px;
+    font-size: 20px;
+   font-family: "Inter Tight" Sathu;
+    line-height: 1.5;
 }
 .box img {
     max-height: 190vh;
@@ -216,11 +233,8 @@ header .hedBut:nth-child(1){
 
 }
 
-
-
-
 .formTextDiv{
-
+    height: 80vh;
     display: flex;
     justify-content:space-around;
     align-items: center;
@@ -289,23 +303,46 @@ form{
 
 
 .secThirdSecDiv{
-    height: 300px;
+    height: 500px;
     width: 500px;
     color: #FAFAFA;
     display: flex;
     flex-direction: column;
     /*padding-left: 700px;*/
-
+    background: #171414;
+   border-radius: 15px;
+    animation: flicker 2s infinite linear;
 
 }
+
+
+
+@keyframes flicker {
+    0% {
+        box-shadow: 15px 15px 22px  #751818; /* Тінь справа */
+    }
+    25% {
+        box-shadow: 15px -15px 22px #8f1a1a; /* Тінь внизу */
+    }
+    50% {
+        box-shadow: -15px -15px 22px #931a1a; /* Тінь зліва */
+    }
+    75% {
+        box-shadow: -15px 15px 22px #911212; /* Тінь зверху */
+    }
+    100% {
+        box-shadow: 15px 15px 22px #9f1717; /* Повертається до початкового стану */
+    }
+}
+
 
 .greyStr{
     padding: 10px;
     margin: 40px;
 }
 .skillDiv{
-    height: 100px;
-    width: 400px;
+    height: 20vh;
+    width: 600px;
     display: flex;
     justify-content: space-around;
 
@@ -314,8 +351,8 @@ form{
 }
 .navSkill{
     background-color: #a6252a;
-    height: 90px;
-    width: 90px;
+    height: 120px;
+    width: 120px;
     border: 1px gray solid;
     border-radius: 60px;
     display: flex;
