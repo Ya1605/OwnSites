@@ -23,28 +23,40 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         });
 });
 
+/*-------------------------------------------------*/
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Запобігає відправці форми
 
-document.getElementById("contact-form").addEventListener("submit",
-    function (event) {
-        event.preventDefault(); // Запобігає відправці форми
+    const phoneInput = document.getElementById("phone").value;
+    const regex = /^(\+?\d{1,2}\s?)?(\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}$/; // Регулярка для номера
 
-        const phoneInput = document.getElementById("phone").value;
-        const regex = /^(\+?\d{1,2}\s?)?(\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}$/; // Регулярка для номера
+    const errorMessage = document.getElementById("error-message");
+    const submitBtn = document.getElementById("numSubmit"); // Це твій input type="submit"
 
-        const errorMessage = document.getElementById("error-message");
-        const submitBtn = document.getElementById("numSubmit");
+    if (regex.test(phoneInput)) {
+        errorMessage.textContent = ""; // Очищає повідомлення про помилку
+        submitBtn.value = " Successfully ✓"; // Змінює текст кнопки
+        submitBtn.style.backgroundColor = "yellow"; // Змінює колір кнопки
 
-        if (regex.test(phoneInput)) {
-            errorMessage.textContent = ""; // Очищає повідомлення про помилку
-            submitBtn.textContent = "✓"; // Змінює текст кнопки на галочку
-            submitBtn.style.backgroundColor = "green"; // Змінює колір кнопки
-            alert("Номер телефону дійсний!"); // Додайте дії при успішній перевірці
-        } else {
-            errorMessage.textContent = "Будь ласка, введіть дійсний номер телефону."; // Повідомлення про помилку
-            submitBtn.textContent = "Відправити"; // Повертає текст кнопки при помилці
-            submitBtn.style.backgroundColor = ""; // Повертає початковий колір кнопки
-        }
-    });
+
+        setTimeout(function () {
+            submitBtn.value = "Send"; // Відновлюємо початковий текст кнопки
+            submitBtn.style.backgroundColor = ""; // Відновлюємо початковий колір кнопки
+            document.getElementById("phone").value = ""; // Очищаємо поле вводу
+            errorMessage.textContent = ""; // Очищаємо повідомлення про помилку
+        }, 1000);
+
+    } else {
+        errorMessage.textContent = "Будь ласка, введіть дійсний номер телефону."; // Повідомлення про помилку
+        submitBtn.value = "Відправити"; // Повертає текст кнопки при помилці
+        submitBtn.style.backgroundColor = ""; // Повертає початковий колір кнопки
+    }
+});
+
+
+
+
+
 
 //-----------------------ANIMATION 1 Page--------------------//
 const staticText = "Hello,my name is Yuliia -"

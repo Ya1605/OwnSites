@@ -169,7 +169,7 @@ header .hedBut:nth-child(1){
     align-items: flex-start;
     white-space: nowrap;
     flex-direction: row;
-    padding-top: 100px;
+    padding-top: 150px;
 
 
 
@@ -298,7 +298,7 @@ form{
 
 }
 .form-group input[type="submit"]:hover {
-    background: #979292;
+    background: #ffffff;
     border: 1px black solid;
     color: #0e0909;
 
@@ -307,7 +307,7 @@ form{
 
 .secThirdSecDiv{
     height: 500px;
-    width: 500px;
+    width: 600px;
     color: #FAFAFA;
     display: flex;
     flex-direction: column;
@@ -318,7 +318,14 @@ form{
 
 }
 
+.secThirdSecDiv p{
+    padding: 20px;
+}
 
+.secThirdSecDiv h3{
+    color: #c51b1b;
+    padding: 20px;
+}
 
 @keyframes flicker {
     0% {
