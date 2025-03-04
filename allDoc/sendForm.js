@@ -28,6 +28,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     event.preventDefault(); // Запобігає відправці форми
 
     const phoneInput = document.getElementById("phone").value;
+    const emailInput = document.getElementById("email").value;
     const regex = /^\d{10}$/; // Регулярка для номера
 
     const errorMessage = document.getElementById("error-message");
@@ -43,6 +44,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
             submitBtn.value = "Send"; // Відновлюємо початковий текст кнопки
             submitBtn.style.backgroundColor = ""; // Відновлюємо початковий колір кнопки
             document.getElementById("phone").value = ""; // Очищаємо поле вводу
+            document.getElementById("email").value = "";
             errorMessage.textContent = ""; // Очищаємо повідомлення про помилку
         }, 1000);
 
