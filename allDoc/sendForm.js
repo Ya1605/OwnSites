@@ -25,7 +25,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
 /*-------------------------------------------------*/
 document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault(); // Запобігає відправці форми
+    event.preventDefault();
 
     const phoneInput = document.getElementById("phone").value;
     const emailInput = document.getElementById("email").value;
@@ -35,35 +35,34 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     const submitBtn = document.getElementById("numSubmit"); // Це твій input type="submit"
 
     if (regex.test(phoneInput)) {
-        errorMessage.textContent = ""; // Очищає повідомлення про помилку
-        submitBtn.value = " Successfully ✓"; // Змінює текст кнопки
-        submitBtn.style.backgroundColor = "yellow"; // Змінює колір кнопки
+        errorMessage.textContent = "";
+        submitBtn.value = " Successfully ✓";
+        submitBtn.style.backgroundColor = "yellow";
 
 
         setTimeout(function () {
-            submitBtn.value = "Send"; // Відновлюємо початковий текст кнопки
-            submitBtn.style.backgroundColor = ""; // Відновлюємо початковий колір кнопки
-            document.getElementById("phone").value = ""; // Очищаємо поле вводу
+            submitBtn.value = "Send";
+            submitBtn.style.backgroundColor = "";
+            document.getElementById("phone").value = "";
             document.getElementById("email").value = "";
-            errorMessage.textContent = ""; // Очищаємо повідомлення про помилку
+            errorMessage.textContent = "";
         }, 1000);
 
     } else {
-        errorMessage.textContent = "Будь ласка, введіть дійсний номер телефону."; // Повідомлення про помилку
-        submitBtn.value = "Відправити"; // Повертає текст кнопки при помилці
-        submitBtn.style.backgroundColor = ""; // Повертає початковий колір кнопки
+        errorMessage.textContent = "Будь ласка, введіть дійсний номер телефону.";
+        submitBtn.style.backgroundColor = "";
     }
 });
 
 document.getElementById("phone").addEventListener("input", function (event) {
-    let input = event.target.value.replace(/\D/g, ""); // Видаляємо всі нецифрові символи
+    let input = event.target.value.replace(/\D/g, "");
 
     // Обмежуємо кількість символів до 10
     if (input.length > 10) {
-        input = input.slice(0, 10); // Забираємо зайві цифри
+        input = input.slice(0, 10);
     }
 
-    event.target.value = input; // Встановлюємо обмежену кількість цифр
+    event.target.value = input;
 });
 
 
