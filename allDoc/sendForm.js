@@ -28,7 +28,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     event.preventDefault(); // Запобігає відправці форми
 
     const phoneInput = document.getElementById("phone").value;
-    const regex = /^(\+?\d{1,2}\s?)?(\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}$/; // Регулярка для номера
+    const regex = /^\d{10}$/; // Регулярка для номера
 
     const errorMessage = document.getElementById("error-message");
     const submitBtn = document.getElementById("numSubmit"); // Це твій input type="submit"
@@ -53,7 +53,16 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     }
 });
 
+document.getElementById("phone").addEventListener("input", function (event) {
+    let input = event.target.value.replace(/\D/g, ""); // Видаляємо всі нецифрові символи
 
+    // Обмежуємо кількість символів до 10
+    if (input.length > 10) {
+        input = input.slice(0, 10); // Забираємо зайві цифри
+    }
+
+    event.target.value = input; // Встановлюємо обмежену кількість цифр
+});
 
 
 
