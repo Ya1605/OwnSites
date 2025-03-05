@@ -64,7 +64,7 @@
     }
 
 .secThird{
-    height: 200vh;
+    height: 170vh;
 }
 
 
@@ -79,11 +79,12 @@
     justify-content: space-around;
     display: flex;
     align-items: flex-end;
-    margin-top: 250px;
+
 
 }
 
 .form-container{
-    margin-top: 150px;
+    height: 60vh;
+    margin: 40px;
 }
 }
