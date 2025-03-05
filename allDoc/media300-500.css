@@ -30,7 +30,10 @@
         justify-content: center;
 
     }
-
+     .secThirdSecDiv h3{
+         margin: 5px;
+         padding-bottom: 5px;
+     }
     .box {
         max-width: 100px;
     }
