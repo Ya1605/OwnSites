@@ -1,0 +1,86 @@
+@media screen and (min-width: 501px) and (max-width: 800px){
+
+
+
+    .text{
+        font-size: 26px;
+    }
+
+    .languageNav{
+        height: 8px;
+        width: 45px;
+        font-size: 15px;
+    }
+
+    .hedBut{
+        height: 15px;
+        width: 70px;
+        font-size: 12px;
+    }
+
+    .secSecond{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hover-text{
+        width: 70vw;
+        padding: 20px;
+
+
+    }
+    .secThird{
+        height: 140vh;
+        width: 100vw;
+
+    }
+
+    .box p{
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .formTextDiv{
+        width: 100vw;
+        height: 140vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .box img{
+        width: 350px;
+        height: 220px;
+
+    }
+
+    .secThirdSecDiv{
+        width: 70vw;
+        height: 60vh;
+    }
+
+    .secThirdSecDiv p,h3{
+        font-size: 14px;
+    }
+    .skillDiv{
+        height: 20vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+.form-container{
+    height: 50vh;
+}
+    .navSkill{
+        height: 70px;
+        width: 80px;
+        font-size: 16px;
+    }
+
+
+}
