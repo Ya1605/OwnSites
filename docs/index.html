@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website with feedback form</title>
+
+    <!-- Favicon and Icon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="docs/favicon_io-4/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="docs/favicon_io-4/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="docs/favicon_io-4/favicon-16x16.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="mask-icon" href="favicon.svg" color="#ED3B44">
+    <link rel="icon" type="image/svg+xml" href="docs/favicon_io-4/favicon.svg">
+
+
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="docs/sitesEfect.css">
+    <link rel="stylesheet" href="docs/media300-500.css" media="screen and (min-width: 360px) and (max-width: 500px)">
+    <link rel="stylesheet" href="docs/media-501-800.css" media="screen and (min-width: 501px) and (max-width: 800px)">
+    <link rel="stylesheet" href="docs/media-801-1200.css" media="screen and (min-width: 801px) and (max-width: 1200px)">
+    <!-- EmailJS Script Initialization -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            emailjs.init("z3_NU-a4Cro6A-hH0");
+            console.log('EmailJS initialized');
+        });
+    </script>
+
+
+
+</head>
+<body>
+
+<section class="secOne">
+    <header>
+
+        <a href="#contact-form" class="hedBut">Order the project</a>
+
+
+
+        <a href="#contact-form" class="hedBut">Recall me</a>
+    </header>
+
+    <div id="divFirst">
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+        <aside></aside>
+
+    </div>
+
+    <div class="text">Hello,<br>my name is Yuliia - i'm front-end developer</div>
+
+    <div class="secDiv">
+
+        <a  href="mailto:yuliiadev@ukr.net" class="languageNav">yuliiadev@ukr.net</a>
+    </div>
+
+
+</section>
+
+
+
+
+<section class="secSecond">
+
+
+
+        <div class="box left">
+       <img src="docs/Car.jpg" alt="Car" loading="lazy">
+            <p class="hover-text"> Developed a responsive landing page with clean HTML5, SCSS,<br>
+                and JavaScript. </p>
+    </div>
+
+     <div class="box right">
+    <img src="docs/Cook.jpg" alt="Cook" loading="lazy">
+         <p class="hover-text">Developed a responsive landing page with clean HTML5, SCSS,<br>
+                               and JavaScript.
+    </div>
+
+ </section>
+
+
+<section class="secThird">
+     <div class="formTextDiv">
+    <div class="secThirdSecDiv">
+
+
+            <h3>I offer professional website development services using modern
+            technologies and standards, including:</h3>
+        <p>
+            &#x1F534; Pixel-Perfect Layout:
+            Pixel-Perfect Layout: Precise design
+            matching with accurate fonts, spacing, and elements. <br>
+            <br>
+
+           <br> &#x1F534; Responsive Design: Websites adapt seamlessly to all devices.<br>
+
+           <br> &#x1F534; Lazy Loading: Optimized images and resources for faster loading.<br>
+
+           <br> &#x1F534; Modern Technologies: HTML5, CSS3, and JavaScript for adaptive, functional sites.<br>
+
+           <br> &#x1F534; Cross-Browser Compatibility: Smooth performance on all major browsers.<br>
+
+
+        </p>
+        </div>
+
+
+         <div>
+    <div class="form-container">
+        <h3>Feedback Form</h3>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone"></label>
+                <input id="phone" name="phone" placeholder="phone - 0671111111 " required>
+            </div>
+            <div class="form-group">
+                <input type="submit" id="numSubmit" value="Send">
+            </div>
+            <p id="error-message" style="color: red;"></p>
+        </form>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+<script src="docs/sendForm.js"></script>
+</body>
+</html>
