@@ -28,7 +28,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     event.preventDefault();
 
     const phoneInput = document.getElementById("phone").value;
-    const emailInput = document.getElementById("email").value;
+
     const regex = /^\d{10}$/; // Регулярка для номера
 
     const errorMessage = document.getElementById("error-message");
