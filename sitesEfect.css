@@ -1,0 +1,386 @@
+
+html{
+
+    overflow-x: hidden; /* Заборона горизонтального скролу */
+    overflow-y: auto;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Заборона горизонтального скролу */
+    overflow-y: auto;
+    font-family: "Inter Tight", sans-serif;
+}
+
+.secOne{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(270deg, #1C1D20 40%, #69292D 55%, #ED3B44 100%);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+    font-size: 26px;
+    position: relative;
+}
+
+
+
+#divFirst{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: flex-start;
+    /*gap: -5px;*/
+    flex-shrink: 0;
+    /*backdrop-filter: blur(3px);*/
+    position: absolute;
+    left: 0;
+
+
+}
+
+#divFirst aside{
+    height: 100vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(59, 59, 59, 0.20) 16.67%, rgb(255, 255, 255, 0.00) 100%);
+    /*background-blend-mode: overlay;
+    /*backdrop-filter: blur(50px);*/
+}
+
+.headOne{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.secDiv{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+     justify-content: flex-end;
+    align-items: flex-end;
+    gap: 8px;
+    position: absolute;
+    right: 10px;
+
+}
+
+.languageNav{
+    all: unset;
+    display: flex;
+    padding: 26px 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 60px;
+    border: 1px solid rgba(250, 250, 250, 0.20);
+    margin-bottom: 35px;
+    cursor: pointer;
+    transition: transform 0.7s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-right: 30px;
+}
+  .languageNav:hover{
+
+      box-shadow: 0px 0px 15px 10px rgb(198, 13, 13);
+  }
+
+.text{
+
+    justify-content: center;
+     display: flex;
+    align-items: center;
+    flex-direction: initial;
+    color: #FAFAFA;
+    /* Desktop_tablet/H1 */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px; /* 100% */
+    letter-spacing: -0.7px;
+    position: absolute;
+    border-right: 3px solid white;
+    padding-right: 5px;
+    white-space: nowrap;
+
+
+}
+
+header{
+
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+
+}
+
+.hedBut{
+    all: unset;
+    width: 130px;
+    height:30px;
+
+    padding: 15px 15px;
+    justify-content: center;
+    align-items: center;
+     background-color:  #ED3B44;
+    font-size: 16px;
+    border-radius: 60px;
+    border: 1px solid rgba(225, 10, 10, 0.2);
+    display: flex;
+    margin: 20px;
+    position: relative;
+    z-index: 10;
+    color: #0e0909;
+    cursor: pointer;
+}
+                         /* black first button*/
+header .hedBut:nth-child(1){
+   background: #1C1D20;
+    color: white;
+}
+
+.hedBut:hover{
+    transform: scale(1.1);
+}
+
+
+/*---------------------------------------second page--------------------------------*/
+
+.secSecond{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(190deg, #1a1a1c 40%, #69292D 65%, #7c1c20 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    white-space: nowrap;
+    flex-direction: row;
+    padding-top: 150px;
+
+
+
+
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   width: 250px;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+
+}
+
+.box p{
+    font-size: 20px;
+   font-family: "Inter Tight" Sathu;
+    line-height: 1.5;
+}
+.box img {
+    max-height: 190vh;
+    width: 40vw;
+    border-radius: 15px;
+}
+
+.left {
+    transform: translateX(-100%);
+}
+
+.right {
+    transform: translateX(100%);
+}
+
+.box.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Стиль для тексту при наведенні */
+.hover-text {
+    margin-top: 30px;
+    color: #fff;
+
+
+}
+
+
+
+
+
+
+/*---------------------------------------third page--------------------------------*/
+
+.secThird{
+    height: 100vh;
+    width: 100vw;
+    background: #1C1D20;
+    overflow: hidden;
+
+
+
+}
+
+.formTextDiv{
+    height: 80vh;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.form-container {
+    margin-top: 25px;
+    height: 450px;
+    width: 350px;
+    background: rgba(174, 43, 43, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+form{
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 12px;
+    resize: none;
+
+}
+
+.form-group input[type="submit"] {
+    background: #0e0909;
+    color: white;
+    cursor: pointer;
+    transition: background 0.1s ease;
+    margin-top: 25px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+
+}
+.form-group input[type="submit"]:hover {
+    background: #ffffff;
+    border: 1px black solid;
+    color: #0e0909;
+
+}
+
+
+.secThirdSecDiv{
+    height: 500px;
+    width: 600px;
+    color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    /*padding-left: 700px;*/
+    background: #171414;
+   border-radius: 15px;
+    animation: flicker 2s infinite linear;
+
+}
+
+.secThirdSecDiv p{
+    padding: 20px;
+}
+
+.secThirdSecDiv h3{
+    color: #c51b1b;
+    padding: 20px;
+}
+
+@keyframes flicker {
+    0% {
+        box-shadow: 15px 15px 22px  #751818; /* Тінь справа */
+    }
+    25% {
+        box-shadow: 15px -15px 22px #8f1a1a; /* Тінь внизу */
+    }
+    50% {
+        box-shadow: -15px -15px 22px #931a1a; /* Тінь зліва */
+    }
+    75% {
+        box-shadow: -15px 15px 22px #911212; /* Тінь зверху */
+    }
+    100% {
+        box-shadow: 15px 15px 22px #9f1717; /* Повертається до початкового стану */
+    }
+}
+
+
+.greyStr{
+    padding: 10px;
+    margin: 40px;
+}
+.skillDiv{
+    height: 20vh;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+
+
+
+}
+.navSkill{
+    background-color: #a6252a;
+    height: 120px;
+    width: 120px;
+    border: 1px gray solid;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    animation: pulse 2s infinite ease-in-out;
+
+}
+
+@keyframes pulse  {
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+
+}

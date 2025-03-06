@@ -1,0 +1,66 @@
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+
+    .text{
+        font-size: 33px;
+    }
+
+     .languageNav{
+         height: 25px;
+         width: 90px;
+         font-size: 18px;
+     }
+
+  .secSecond{
+      padding-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+  }
+
+  .box img{
+
+      height: 350px;
+      width: 550px;
+  }
+  .box{
+      height: 350px;
+      padding: 40px;
+
+  }
+   .box p{
+       font-size: 14px;
+   }
+    .secThird{
+        width: 100vw;
+        height: 130vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+   .formTextDiv{
+       width: 100vw;
+       display: flex;
+       flex-direction: column;
+   }
+  .secThirdSecDiv{
+      height: 70vh;
+      width: 70vw;
+      margin-top: 100px;
+  }
+
+
+
+.secThirdSecDiv h3{
+    padding: 20px;
+}
+.form-container{
+    height: 45vh;
+    width: 50vw;
+    margin-top: 200px;
+}
+}
+
+

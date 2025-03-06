@@ -1,0 +1,75 @@
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .text {
+        font-size: 17px;
+    }
+
+    .languageNav {
+        width: 45px;
+        height: 3px;
+        font-size: 15px;
+    }
+
+    .hedBut {
+        height: 10px;
+        width: 60px;
+        font-size: 11px;
+    }
+
+    .secSecond {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hover-text {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+
+    }
+     .secThirdSecDiv h3{
+         margin: 5px;
+         padding-bottom: 5px;
+     }
+    .box {
+        max-width: 100px;
+    }
+
+    .box p {
+        font-size: 12px;
+        display: flex;
+        padding: 20px;
+
+    }
+
+    .box img {
+        height: 150px;
+        width: 260px;
+    }
+
+    .formTextDiv {
+        flex-direction: column;
+        display: flex;
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .secThirdSecDiv {
+        width: 90vw;
+        height: 90vh;
+        margin: 30px;
+    }
+
+.secThird{
+    height: 160vh;
+}
+
+.form-container{
+    height: 60vh;
+    width: 80vw;
+    margin: 40px;
+}
+}
