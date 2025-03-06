@@ -59,28 +59,18 @@
     }
 
     .secThirdSecDiv{
-        width: 70vw;
+        width: 80vw;
         height: 60vh;
     }
 
     .secThirdSecDiv p,h3{
         font-size: 14px;
     }
-    .skillDiv{
-        height: 20vh;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
 
-    }
 .form-container{
     height: 50vh;
 }
-    .navSkill{
-        height: 70px;
-        width: 80px;
-        font-size: 16px;
-    }
+
 
 
 }

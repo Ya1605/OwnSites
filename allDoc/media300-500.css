@@ -64,27 +64,12 @@
     }
 
 .secThird{
-    height: 170vh;
-}
-
-
-.navSkill{
-    height: 80px;
-    width: 80px;
-}
-
-
-.skillDiv{
-    width: 100vw;
-    justify-content: space-around;
-    display: flex;
-    align-items: flex-end;
-
-
+    height: 160vh;
 }
 
 .form-container{
     height: 60vh;
+    width: 80vw;
     margin: 40px;
 }
 }
