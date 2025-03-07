@@ -1,4 +1,4 @@
-@media screen and (min-width: 801px) and (max-width: 1200px) {
+@media screen and (min-width: 801px) and (max-width: 1200px){
 
     .text{
         font-size: 33px;
@@ -46,8 +46,8 @@
        flex-direction: column;
    }
   .secThirdSecDiv{
-      height: 70vh;
-      width: 70vw;
+      height: 80vh;
+      width: 60vw;
       margin-top: 100px;
   }
 
@@ -57,9 +57,9 @@
     padding: 20px;
 }
 .form-container{
-    height: 45vh;
-    width: 50vw;
-    margin-top: 200px;
+    height: 50vh;
+    width: 40vw;
+    margin-top: 100px;
 }
 }
 
