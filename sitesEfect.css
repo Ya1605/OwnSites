@@ -1,10 +1,16 @@
 
 html{
 
-    overflow-x: hidden; /* Заборона горизонтального скролу */
-    overflow-y: auto;
+    overflow: auto;
+    -ms-overflow-style: none;  /* Для IE та старих версій Edge */
+    scrollbar-width: none;
 
 }
+
+* {
+    outline: 1px solid red;
+}
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -14,9 +20,11 @@ html{
 body{
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: "Inter Tight", sans-serif;
+    overflow: auto;
+    -ms-overflow-style: none;  /* Для IE та старих версій Edge */
+    scrollbar-width: none;
 }
 
 .secOne{
