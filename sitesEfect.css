@@ -6,13 +6,16 @@ html{
 
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 body{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
-    overflow-x: hidden; /* Заборона горизонтального скролу */
-    overflow-y: auto;
     font-family: "Inter Tight", sans-serif;
 }
 
